@@ -8,7 +8,17 @@ public class Gaulois {
 		this.force = force;
 	}
 	public String getnom() {
-		return this.nom;
+		return nom;
+	}
+	public void parler(String texte){
+		System.out.println("Le gaulois "+ nom + " : « " + texte + " ». \n");
+	}
+	
+	//main C
+	public static void main(String[] args) {
+		Gaulois asterix = new Gaulois("Astérix", 8);
+		System.out.println(asterix.getnom());
+		
 	}
 	
 }
