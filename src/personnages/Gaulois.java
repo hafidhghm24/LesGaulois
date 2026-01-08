@@ -15,13 +15,14 @@ public class Gaulois {
 	}
 	
 	public void  frapper(Romain enemie) {
-		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + enemie);
+		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + enemie.getNom() + "\n");
 	}
 	
 	//main C
 	public static void main(String[] args) {
 		Gaulois asterix = new Gaulois("Astérix", 8);
 		System.out.println(asterix.getnom());
+	
 		
 	}
 	

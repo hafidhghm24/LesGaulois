@@ -20,5 +20,7 @@ public class TestGaulois{
 			
 			minus.recevoirCoup(3);
 		}
+		
+		asterix.frapper(minus);
 	}
 }
