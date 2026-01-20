@@ -22,11 +22,11 @@ public class Romain {
 		if (force < 0) {
 			force = 0;
 		}
-		else if(force > 0){
-			parler("Aîe !");
+		else if(force < 1){
+			parler("J'abandonne...");
 		}
 		else {
-			parler("J'abandonne...");
+			parler("Aîe !");
 		}
 	}
 	

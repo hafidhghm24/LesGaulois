@@ -14,8 +14,9 @@ public class Gaulois {
 		System.out.println("Le gaulois "+ nom + " : « " + texte + " ». \n");
 	}
 	
-	public void  frapper(Romain enemie) {
-		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + enemie.getNom() + "\n");
+	public void  frapper(Romain romain) {
+		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom() + "\n");
+		romain.recevoirCoup(force/3);
 	}
 	
 	//main C

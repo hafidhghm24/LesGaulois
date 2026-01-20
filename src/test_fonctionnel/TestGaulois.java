@@ -16,11 +16,11 @@ public class TestGaulois{
 		minus.parler("UN GAU... UN GAUGAU");
 		
 		int i; 
-		for(i=0; i<2; i++) {
+		for(i=0; i<3; i++) {
 			
-			minus.recevoirCoup(3);
+			asterix.frapper(minus);
 		}
 		
-		asterix.frapper(minus);
+		
 	}
 }
