@@ -8,18 +8,19 @@ public class TestGaulois{
 	public static void main(String[] args) {
 		//creer un gaulois
 		Gaulois asterix = new Gaulois("Astérix", 8);
-		System.out.println(asterix.getnom());
-		asterix.parler("heyyy");
+		asterix.parler("bonjour a tous");
 		
 		//creer un Romain
 		Romain minus = new Romain("Minus", 6);
-		minus.parler("UN GAU... UN GAUGAU");
+		minus.parler("UN GAU... UN GAUGAU...");
+
+		asterix.frapper(minus);
+		minus.frapper(asterix);
+		asterix.frapper(minus);
+		minus.frapper(asterix);
+		asterix.frapper(minus);
 		
-		int i; 
-		for(i=0; i<3; i++) {
-			
-			asterix.frapper(minus);
-		}
+		
 		
 		
 	}
