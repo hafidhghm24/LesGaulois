@@ -30,6 +30,27 @@ public class TestSites {
 		village.ajouterVillagois("Obelix", 15);
 		village.ajouterVillagois("Prolix", 3);
 		
+		System.out.println("\nTEST AFFICHAGE VILLAGE\n");
+		village.afficherVillageois();
+		
+		System.out.println("\nTEST AFFICHAGE CAMP\n");
+		camp.afficherCamp();
+		
+		System.out.println("\nTEST CHANGEMENT DE CHEF\n");
+		Gaulois newChefGaulois = new Gaulois("Abraracourcix",5);
+		village.changerChef(newChefGaulois);
+		
+		Soldat newCommandant = new Soldat(Grade.SOLDAT, "Briseradius", 4);
+		camp.changerChef(newCommandant);
+		Soldat newCommandant2 = new Soldat(Grade.CENTURION, "Chorus", 4);
+		camp.changerChef(newCommandant2);
+		
+		
+		
+		
+		
+		
+		
 		
 		
 	}
