@@ -3,7 +3,8 @@ import personnages.*;
 
 public class Village {
 	private Gaulois chef;
-	public Gaulois[] gaulois = new Gaulois[50];
+	private int nbunit = 4;
+	public Gaulois[] gaulois = new Gaulois[nbunit];
 	private int nbVillagois = 0;
 	
 	public Village (Gaulois chef) {
@@ -13,9 +14,15 @@ public class Village {
 		return chef;
 	}
 	public void ajouterVillagois(String nom, int force) {
-		if (nbVillagois<50) {
-			gaulois[nbVillagois] = new Gaulois(nom, force);
+		Gaulois gauloi = new Gaulois(nom, force);
+		if (nbVillagois<nbunit) {
+			gaulois[nbVillagois] = gauloi;
+			gauloi.parler("Bienvenue " + gauloi.getNom() + " !");
+			
 			nbVillagois++;
+		}
+		else {
+			gauloi.parler("Désolé " + gauloi.getNom()+" mon village est déjà bien rempli. ");
 		}
 		
 	}
