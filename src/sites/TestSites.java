@@ -45,14 +45,6 @@ public class TestSites {
 		Soldat newCommandant2 = new Soldat(Grade.CENTURION, "Chorus", 4);
 		camp.changerChef(newCommandant2);
 		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 	
 
