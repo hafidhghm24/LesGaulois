@@ -1,7 +1,6 @@
 package test_fonctionnel;
 
-import personnages.Gaulois;
-import personnages.Romain;
+import personnages.*;
 
 public class TestGaulois{
 	//main A

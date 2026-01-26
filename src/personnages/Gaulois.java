@@ -12,6 +12,10 @@ public class Gaulois extends Personnage{
 		
 	}
 	
+	public void boirPosion(int potionForce) {
+		
+	}
+	
 	
 	//main C
 	public static void main(String[] args) {
