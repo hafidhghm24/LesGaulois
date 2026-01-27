@@ -41,5 +41,7 @@ public class Village {
 		chef = newChef;
 		chef.parler("Merci !");
 	}
+	
+	
 
 }

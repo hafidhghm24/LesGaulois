@@ -26,14 +26,15 @@ public abstract class Personnage {
 	
 	public void recevoirCoup(int force_coup) {
 		force = force - force_coup;
-		if (force < 0) {
-			force = 0;
+		if (force <= 0) {
+		    force = 0;
+		    parler("J'abandonne...");
+		} else {
+		    parler("Aïe !");
 		}
-		else if(force < 1){
-			parler("J'abandonne...");
-		}
-		else {
-			parler("Aîe !");
-		}
+	}
+	
+	public int getForce() {
+		return force;
 	}
 }
