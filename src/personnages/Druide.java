@@ -25,8 +25,7 @@ public class Druide extends Gaulois {
 
     public void fabriquerPotion(int nbPotions) {
         this.nbPotions = nbPotions;
-        // Utilise puissanceMin et puissanceMax !
-        potionForce = random.nextInt(puissanceMax - puissanceMin + 1) + puissanceMin;
+        potionForce = random.nextInt(puissanceMin, puissanceMax);
         parler("J'ai concocté " + nbPotions + " doses de potion magique. Elle a une force de " + potionForce + ".");
     }
 

@@ -13,8 +13,7 @@ public class TestGaulois{
 		Gaulois Agecanonix = new Gaulois("Agecanonix", 5);
 		
 		asterix.parler("Bonjour à tous");
-		
-		//creer un Romain
+
 		Romain minus = new Romain("Minus", 6);
 		
 		Druide druide = new Druide("Panoramix", 0, 2, 6);
@@ -29,11 +28,10 @@ public class TestGaulois{
 		
 		minus.parler("UN GAU... UN GAUGAU...");
 
-		asterix.frapper(minus);
-		minus.frapper(asterix);
-		asterix.frapper(minus);
-		minus.frapper(asterix);
-		asterix.frapper(minus);
+		while(!asterix.estaTerre() && !minus.estaTerre()) {
+			asterix.frapper(minus);
+			minus.frapper(asterix);
+		}
 		
 		
 		

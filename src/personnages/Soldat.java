@@ -12,4 +12,9 @@ public class Soldat extends Romain{
 		return this.grade;
 	}
 	
+	@Override
+	public void parler(String texte) {
+		System.out.println("Le " + donnerAuteur()+ getNom() + "de grade "+ grade + ": « " + texte + " ».\r\n");
+	}
+	
 }

@@ -8,7 +8,16 @@ public class Romain extends Personnage{
 	
 	@Override
 	protected String donnerAuteur() {
-		return "Le Romain ";
+		return "Romain ";
+	}
+	
+	@Override
+	public void  frapper(Personnage ennemie) {
+		if(!estaTerre()) {
+			System.out.println("Le " + donnerAuteur() + getNom() + " donne un grand coup de force " + force + " au " + ennemie.donnerAuteur() + " " + ennemie.getNom() + ".");
+			ennemie.recevoirCoup(force/3);
+		}
+		
 	}
 	
 	

@@ -8,7 +8,7 @@ public class Gaulois extends Personnage{
 	
 	@Override
 	protected String donnerAuteur() {
-		return "Le gaulois ";
+		return "gaulois ";
 		
 	}
 	
@@ -18,13 +18,16 @@ public class Gaulois extends Personnage{
 	
 	@Override
 	public void  frapper(Personnage ennemie) {
-		int coupForce = (int)(getForce()/ 3 * boost);
-		System.out.println(donnerAuteur() + getNom() + " donne un grand coup de force " + coupForce + " au " + ennemie.donnerAuteur() + " " + ennemie.getNom() + ".");
-		ennemie.recevoirCoup(coupForce);
-		if(boost> 1) {
-			boost -= 0.5;
+		int coupForce = (int)(force * boost/ 3 );
+		if(!estaTerre()) {
+			System.out.println(donnerAuteur() + getNom() + " donne un grand coup de force " + coupForce + " au " + ennemie.donnerAuteur() + " " + ennemie.getNom() + ".");
+			ennemie.recevoirCoup(coupForce);
+			if(boost> 1) {
+				boost -= 0.5;
+			}
+			else {boost = 1;}
 		}
-		else {boost = 1;}
+		
 	}
 	
 	
