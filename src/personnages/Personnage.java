@@ -28,7 +28,7 @@ public abstract class Personnage {
 		
 	}
 	
-	public void recevoirCoup(int forceCoup) {
+	protected void recevoirCoup(int forceCoup) {
 		force = force - forceCoup;
 		if (force <= 0) {
 		    force = 0;

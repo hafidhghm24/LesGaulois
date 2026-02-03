@@ -2,39 +2,40 @@ package test_fonctionnel;
 
 import personnages.*;
 
-public class TestGaulois{
-	//main A
-	public static void main(String[] args) {
-		//creer un gaulois
-		Gaulois asterix = new Gaulois("Astérix", 5);
-		Gaulois obelix = new Gaulois("Obélix", 5);
-		Gaulois Assurancetourix = new Gaulois("Assurancetourix", 5);
-		Gaulois Abraracourcix = new Gaulois("Abraracourcix", 5);
-		Gaulois Agecanonix = new Gaulois("Agecanonix", 5);
-		
-		asterix.parler("Bonjour à tous");
+public class TestGaulois {
+    public static void main(String[] args) {
 
-		Romain minus = new Romain("Minus", 6);
-		
-		Druide druide = new Druide("Panoramix", 0, 2, 6);
-		druide.fabriquerPotion(3);
-		
-		
-		druide.donnerPotion(asterix);
-		druide.donnerPotion(obelix);
-		druide.donnerPotion(Assurancetourix);
-		druide.donnerPotion(Abraracourcix);
-		druide.donnerPotion(Agecanonix);
-		
-		minus.parler("UN GAU... UN GAUGAU...");
+        Gaulois asterix = new Gaulois("Astérix", 5);
+        Gaulois obelix = new Gaulois("Obélix", 5);
+        Gaulois assurancetourix = new Gaulois("Assurancetourix", 5);
+        Gaulois abraracourcix = new Gaulois("Abraracourcix", 5);
+        Gaulois agecanonix = new Gaulois("Agecanonix", 5);
 
-		while(!asterix.estaTerre() && !minus.estaTerre()) {
-			asterix.frapper(minus);
-			minus.frapper(asterix);
-		}
-		
-		
-		
-		
-	}
+        Soldat minus = new Soldat(Grade.SOLDAT, "Minus", 6);
+
+        Druide panoramix = new Druide("Panoramix", 3, 2, 6);
+
+        minus.sEquiper(Equipement.BOUCLIER);
+        minus.sEquiper(Equipement.CASQUE);
+        minus.sEquiper(Equipement.PLASTRON);
+
+
+        panoramix.fabriquerPotion(3);
+
+        panoramix.donnerPotion(asterix);
+        panoramix.donnerPotion(obelix);
+        panoramix.donnerPotion(assurancetourix);
+        panoramix.donnerPotion(abraracourcix);
+        panoramix.donnerPotion(agecanonix);
+
+
+        asterix.parler("Bonjour à tous");
+
+
+        minus.parler("UN GAU... UN GAUGAU...");
+
+        while (!asterix.estaTerre() && !minus.estaTerre()) {
+            asterix.frapper(minus);
+        }
+    }
 }
