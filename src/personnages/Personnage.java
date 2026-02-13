@@ -23,9 +23,13 @@ public abstract class Personnage {
 	public void  frapper(Personnage ennemie) {
 		if(!ennemie.estaTerre()) {
 			System.out.println(nom + " envoie un grand coup dans la mâchoire de " + ennemie.getNom() + "\n");
-			ennemie.recevoirCoup(force/3);
+			ennemie.recevoirCoup(calculerForceFrappe());
 		}
 		
+	}
+
+	protected int calculerForceFrappe() {
+		return force/3;
 	}
 	
 	protected void recevoirCoup(int forceCoup) {
