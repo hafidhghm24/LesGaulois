@@ -47,4 +47,8 @@ public abstract class Personnage {
 	public boolean estaTerre() {
 		return this.force == 0;
 	}
+	
+	public int getForce() {
+		return force;
+	}
 }

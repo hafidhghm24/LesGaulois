@@ -66,4 +66,6 @@ public class Soldat extends Romain {
     protected String donnerAuteur() {
         return "soldat ";
     }
+    
+    
 }
